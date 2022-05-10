@@ -54,9 +54,9 @@ public class vetorotimo implements IVetor{
         if (indice != -1){ //achou o elemento
             for(int i = indice; i < (elementos.length-1); i++){
                 elementos[i] = elementos[i+1];
-                totalAlunos--;
-                return true;
             }
+            totalAlunos--;
+            return true;
         }
         return false;
     }
