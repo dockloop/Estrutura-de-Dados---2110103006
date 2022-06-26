@@ -21,6 +21,34 @@ public class LDE implements Lista{
         }
         totalNohs++;
     }
+    public int nroPares(){
+        int retorno = 0;
+        //Noh retorno1 = null;
+        for(Noh i = inicio; i != null; i = i.getProx()){
+            if(i.getInfo()%2 == 0){
+                System.out.println("Num: " +i.getInfo());
+                retorno++;
+            }
+        }
+        return retorno;
+    }
+
+    public void add_ordenado(int a){
+        Noh novo = new Noh(a);
+        if(inicio == null){
+            inicio = novo;
+            ultimo = novo;
+        }else {
+            for(novo = inicio; novo != null; novo = novo.getProx()){
+                if(novo.getInfo() > a){
+                    novo.setProx(inicio);
+                    inicio.setAnt(novo);
+                    inicio = novo;
+                }
+            }
+        }
+        
+    }
 
     public void insereFim(int a) { 
         Noh novo = new Noh(a);
