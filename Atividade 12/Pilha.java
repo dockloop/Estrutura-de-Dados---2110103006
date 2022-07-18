@@ -46,15 +46,5 @@ public class Pilha implements IPilha{
         return true;
     }
 
-    public boolean isPalindromo(){
-        if(isEmpty()){
-            System.out.println("Pilha Vazia!");
-            return false;
-        }
-        for(int i = 0; i <= eNum - 1; i++){
-            
-        }
 
-        return true;
-    }
 }
