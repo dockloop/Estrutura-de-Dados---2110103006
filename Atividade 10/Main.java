@@ -1,12 +1,15 @@
 public class Main {
     public static void main(String[] args){
-        IFila fila = new Fila(5);
+        IFila fila = new Fila(6);
 
-        System.out.println(fila.isEmpty());
-        fila.add(new Aluno("Marcos", 2110103006));
-        System.out.println(fila.isEmpty());
-        fila.add(new Aluno("Maria", 2034523145));
-        fila.remove();
+       // System.out.println(fila.isEmpty());
+        fila.add(55);
+       // System.out.println(fila.isEmpty());
+        fila.add(8);
+        fila.add(new Aluno("Marcos", 12345));
+        fila.add(29);
+        fila.add(30);
+        //fila.remove();
         fila.print();
     }
 }

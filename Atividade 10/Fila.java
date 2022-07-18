@@ -2,7 +2,6 @@ public class Fila implements IFila{
     private int nElem;
     private int inicio;
     private Object[] vetFila;
-    private Aluno aluno;
 
     public Fila(int tamFila){
         this.nElem = 0;
@@ -31,12 +30,13 @@ public class Fila implements IFila{
     }
 
     public boolean remove(){
-        if(this.isEmpty()){
+        if(!this.isEmpty()){
             System.out.println("Fila vazia");
             return false;
         }
 
         this.inicio = (this.inicio + 1) % this.vetFila.length;
+        this.vetFila[inicio] = null;
         nElem --;
         return true;
     }
@@ -47,10 +47,9 @@ public class Fila implements IFila{
 
 
     public void print(){
-        int fim = (this.inicio + this.nElem) % this.vetFila.length;
-
-        for(int i = inicio; i >= fim; i++){
-                System.out.println(aluno.getMatricula());
+        for(int i = inicio; i < nElem; i++){
+            System.out.println(vetFila[i].toString());
+            //System.out.println("oi");
         }
     }
 
